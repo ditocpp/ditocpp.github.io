@@ -1,4 +1,4 @@
-let mainNavLinks = document.querySelectorAll("nav ul li a");
+let mainNavLinks = document.querySelectorAll("nav");
 
 mainNavLinks.forEach(link => {
   link.addEventListener("click", event => {
