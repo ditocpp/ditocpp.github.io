@@ -26,17 +26,16 @@
 }
 
 /*-------------NAVIGATION BAR----------------------*/
-header{
-    display: inline;
-}
-
 nav {
     position: sticky;
-    top:0px; /*Initial position to make flexbox work with sticky*/
-    align-self: flex-start;
+    top: 0;
+    z-index: 1;
 }
 
-.nav-list {
+.navbar {
+    width: 100%;
+    position: sticky;
+    top: 0;
     background: var(--clr-primary);
     padding: 1rem 0;
     display: flex;
@@ -198,4 +197,10 @@ aside {
 
 
 /*LAYOUT RESPONSIVENESS*/
-
+@media screen and (max-width: 1024px) {
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+}
