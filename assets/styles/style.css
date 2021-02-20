@@ -267,9 +267,6 @@ aside {
         width: 75%;
         height: 250px;
     }
-}
-
-@media screen and (max-width: 800px) {
     .nav-item {
         font-size: 18px;
     }
