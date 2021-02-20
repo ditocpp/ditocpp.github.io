@@ -99,13 +99,23 @@ footer {
     color: white;
     background-color: var(--clr-header);
     text-align: center;
-    font-weight: bold;
 }
 
 main {
     padding: 20px;
     overflow: auto;
 }
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+    font-weight: bold;
+}
+
 /*-----------------------------------------------*/
 
 /*---------------IMAGE & FLEXBOX-----------------*/
@@ -256,5 +266,11 @@ aside {
     .image-steps {
         width: 75%;
         height: 250px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-item {
+        font-size: 18px;
     }
 }
