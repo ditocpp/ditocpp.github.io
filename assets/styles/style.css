@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;1,600&display=swap');
+
+/*GLOBAL SELECTORS*/
+:root {
+    --clr-primary: #3581B8;
+    --clr-header: #0D3B66;
+    --clr-gray: #37474f;
+    --clr-platinum: #EBE9E9;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*JUMBOTRON*/
+.jumbotron {
+    font-size: 20px;
+    padding: 30px;
+    padding-left: 75px;
+    background-color: var(--clr-header);
+    text-align: justify;
+    color: white;
+}
+
+/*-------------NAVIGATION BAR----------------------*/
+header{
+    display: inline;
+}
+
+nav {
+    position: sticky;
+    top:0px; /*Initial position to make flexbox work with sticky*/
+    align-self: flex-start;
+}
+
+.nav-list {
+    background: var(--clr-primary);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    transition: all 200ms ease-in;
+}
+
+.nav-item a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.nav-item:first-child {
+    margin-left: 75px;
+}
+/*-----------------------------------------------*/
+
+/*-------------MAIN CONTENT----------------------*/
+body {
+    background: var(--clr-platinum);
+}
+
+
+h2,h3 {
+    color: #33658A;
+    line-height: 3rem;
+}
+
+#content {
+    float: left;
+    width: 75%;
+    line-height: 2rem;
+}
+
+#content > article {
+    background:white;
+    box-shadow: 0px 0px 10px lightgrey;
+    margin: .5rem;
+    margin-left: 50px;
+    padding: 1rem 1rem 1rem 2.5rem;
+    border-radius: .5rem;
+    text-align: justify;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold;
+}
+
+.profile header{
+    text-align: center;
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+}
+/*-----------------------------------------------*/
+
+/*-------------PROFILE CARD----------------------*/
+aside {
+    color:var(--clr-gray);
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.wrapper-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    top: 0px;
+    justify-content: center;
+}
+
+.container {
+    overflow: auto;
+    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+    background-color: white;
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+    width: 280px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.banner-img {
+    position: absolute;
+    background-image: url('../images/profile-bg.jpg');
+    height: 10rem;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-img {
+    width: 8rem;
+    clip-path: circle(60px at center);
+    margin-top: 4.5rem;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.description {
+    margin: .5rem 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+.butt {
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--clr-primary);
+    padding: 1rem;
+}
+
+.butt a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.butt a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+
+/*LAYOUT RESPONSIVENESS*/
+
