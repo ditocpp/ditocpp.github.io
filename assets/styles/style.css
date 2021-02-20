@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;1,600&display=swap');
 
-/*GLOBAL SELECTORS*/
+/*--------------GLOBAL SELECTORS*--------------------*/
 :root {
     --clr-primary: #3581B8;
     --clr-header: #0D3B66;
@@ -15,11 +15,11 @@
     padding: 0;
 }
 
-/*JUMBOTRON*/
+/*---------------------JUMBOTRON-------------------*/
 .jumbotron {
     font-size: 20px;
     padding: 30px;
-    padding-left: 75px;
+    padding-left: 50px;
     background-color: var(--clr-header);
     text-align: justify;
     color: white;
@@ -34,10 +34,8 @@ nav {
 
 .navbar {
     width: 100%;
-    position: sticky;
-    top: 0;
     background: var(--clr-primary);
-    padding: 1rem 0;
+    padding: .15rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -46,6 +44,7 @@ nav {
 .nav-item {
     list-style: none;
     margin-right: 2rem;
+    font-size: 22px;
 }
 
 .nav-item a {
@@ -60,7 +59,7 @@ nav {
 }
 
 .nav-item:first-child {
-    margin-left: 75px;
+    margin-left: 50px;
 }
 /*-----------------------------------------------*/
 
@@ -68,7 +67,6 @@ nav {
 body {
     background: var(--clr-platinum);
 }
-
 
 h2,h3 {
     color: #33658A;
@@ -85,35 +83,73 @@ h2,h3 {
     background:white;
     box-shadow: 0px 0px 10px lightgrey;
     margin: .5rem;
-    margin-left: 50px;
-    padding: 1rem 1rem 1rem 2.5rem;
+    margin-left: 25px;
+    padding: 2rem 3rem 2rem 3rem;
     border-radius: .5rem;
     text-align: justify;
+}
+
+section::after {  /*line break after every section*/
+    content: "\A";
+    white-space: pre;
 }
 
 footer {
     padding: 20px;
     color: white;
-    background-color: #00a2c6;
+    background-color: var(--clr-header);
     text-align: center;
     font-weight: bold;
-}
-
-.profile header{
-    text-align: center;
-}
-
-.featured-image {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    object-position: center;
 }
 
 main {
     padding: 20px;
     overflow: auto;
 }
+/*-----------------------------------------------*/
+
+/*---------------IMAGE & FLEXBOX-----------------*/
+.image-steps {
+    width: 50%;
+    height: 250px;
+    margin: 20px;
+    border-radius: 2%;
+}
+
+.float-right {
+    float: right;
+    width: 50%;
+    height: 250px;
+}
+
+.image-flex {
+    height: 100%;
+    width: 100%;
+}
+
+.img-container {
+    width: 600px;
+    border: .5rem var(--clr-gray);
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    flex-basis: 33.333%;
+    border: .5px solid var(--clr-gray);
+}
+
+.double {
+    flex-basis: 50%;
+}
+
 /*-----------------------------------------------*/
 
 /*-------------PROFILE CARD----------------------*/
@@ -192,15 +228,33 @@ aside {
 
 .butt a:hover {
     color: white;
-    font-weight: bold;
+    font-size: 1.1rem;
 }
 
-
-/*LAYOUT RESPONSIVENESS*/
+/*-------------LAYOUT RESPONSIVENESS-----------------*/
 @media screen and (max-width: 1024px) {
     #content,
     aside {
         width: 100%;
         padding: 0;
+    }
+    .img-container {
+        width: 400px;
+        border: .5rem var(--clr-gray);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .jumbotron {
+        font-size: 15px;
+    }
+    .img-container {
+        width: 200px;
+        border: .5rem var(--clr-gray);
+    }
+
+    .image-steps {
+        width: 75%;
+        height: 250px;
     }
 }
